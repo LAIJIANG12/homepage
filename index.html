@@ -1,121 +1,57 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name</title>
-  <meta name="description" content="简洁的个人主页">
-  <meta name="color-scheme" content="dark">
-  <meta name="theme-color" content="#181818">
-
-  <!-- Iosevka 字体（jsDelivr CDN） -->
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5/index.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5/700.css">
-
-  <style>
-    :root {
-      --bg: #181818;
-      --fg: #e8e8e8;
-      --dim: #9b9b9b;
-      --line: #2c2c2c;
-      --accent: #7fd1a8;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: clamp(24px, 6vw, 72px);
-      background: var(--bg);
-      color: var(--fg);
-      font-family: "Iosevka", ui-monospace, SFMono-Regular, Menlo, Consolas,
-                   "PingFang SC", "Microsoft YaHei", monospace;
-      font-size: 16px;
-      line-height: 1.75;
-      letter-spacing: 0.01em;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    main {
-      width: 100%;
-      max-width: 36rem;
-    }
-
-    h1 {
-      margin: 0 0 0.35em;
-      font-size: clamp(1.5rem, 4vw, 2rem);
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.01em;
-    }
-
-    p {
-      margin: 0 0 1em;
-      color: var(--dim);
-    }
-
-    a {
-      color: var(--fg);
-      text-decoration: none;
-      border-bottom: 1px solid var(--line);
-      transition: color .15s ease, border-color .15s ease;
-    }
-    a:hover { color: var(--accent); border-color: var(--accent); }
-    a:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 3px;
-      border-radius: 2px;
-    }
-
-    hr {
-      margin: 2rem 0;
-      border: 0;
-      border-top: 1px solid var(--line);
-    }
-
-    nav ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem 1.5rem;
-    }
-
-    footer {
-      margin-top: 2.5rem;
-      font-size: 0.8125rem;
-      color: #6f6f6f;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * { transition: none !important; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Links</title>
+    <style>
+        body {
+            background-color: #181818;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 40px;
+            line-height: 1.6;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+        li::before {
+            content: "■"; /* 绿色方块 */
+            color: #7cb342; /* 接近图中的绿色 */
+            margin-right: 10px;
+            font-size: 0.9em;
+        }
+        .name {
+            width: 220px; /* 固定宽度对齐 */
+            font-weight: 500;
+        }
+        a {
+            color: #e0e0e0; /* 或者 #7cb342，这里保持白色 */
+            text-decoration: underline;
+            text-decoration-color: #7cb342; /* 绿色下划线 */
+            text-underline-offset: 4px;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #7cb342;
+        }
+        .desc {
+            color: #888;
+            margin-left: 10px;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
-  <main>
-    <h1>Your Name</h1>
-    <p>一句话介绍自己：开发者 / 写作者 / 随便什么。</p>
-    <p>这里可以再写一两行，但越少越好。</p>
-
-    <hr>
-
-    <nav aria-label="链接">
-      <ul>
-        <li><a href="https://github.com/yourname" rel="me">GitHub</a></li>
-        <li><a href="https://x.com/yourname" rel="me">X</a></li>
-        <li><a href="mailto:you@example.com">Email</a></li>
-      </ul>
-    </nav>
-
-    <footer>© Your Name</footer>
-  </main>
+    <ul>
+        <li><span class="name">personal GitHub</span> — <a href="https://github.com/rexim" target="_blank">github.com/rexim</a></li>
+        <!-- 等等... -->
+    </ul>
 </body>
 </html>
