@@ -1,0 +1,169 @@
+:root {
+    color-scheme: dark;
+
+    --page-bg: #101010;
+    --card-bg: #181818;
+    --fg: #eeeeee;
+    --muted: #9a9a9a;
+    --green: #73c936;
+    --yellow: #d6ac05;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--page-bg);
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100svh;
+    margin: 0;
+    padding: 45px 24px 45px 152px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: var(--fg);
+    font-family: Alegreya, "Iowan Old Style", Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Decorative waving character: outside the card on wide screens, beside the
+   title inside the card on narrow ones. */
+.logo {
+    position: absolute;
+    top: -1px;
+    left: -128px;
+    width: 100px;
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    position: relative;
+    width: 450px;
+    max-width: 100%;
+    padding: 8px 28px 18px;
+    background: var(--card-bg);
+}
+
+h1 {
+    margin: 16px 0 20px;
+    font-size: clamp(34px, 10vw, 45px);
+    line-height: 1.1;
+}
+
+.title {
+    color: var(--green);
+}
+
+a {
+    color: var(--yellow);
+    text-underline-offset: 3px;
+    transition: color 0.15s ease;
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--fg);
+    text-decoration-thickness: 2px;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+ul {
+    margin-bottom: 4px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px 10px;
+    margin-bottom: 10px;
+}
+
+.link-img-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    display: block;
+    width: 45px;
+    height: 45px;
+}
+
+.link-img-item:hover .icon {
+    content: url("ds.webp");
+}
+
+.site-footer {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid #262626;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+::selection {
+    background: var(--green);
+    color: var(--page-bg);
+}
+
+@media (max-width: 759px) {
+    body {
+        padding: 24px 16px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 450px;
+        padding: 12px 20px 16px;
+    }
+
+    .site-header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 16px;
+    }
+
+    .site-header h1 {
+        margin: 0;
+    }
+
+    .logo {
+        position: static;
+        width: 64px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
