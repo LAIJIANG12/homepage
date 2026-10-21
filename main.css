@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Alegreya";
+  src: url("fonts/Alegreya-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --bg-page: #252525;
   --bg-body: #181818;
@@ -16,6 +24,7 @@ body {
   max-width: 600px;
   min-height: 100vh;
   margin: 20px auto;
+  font-family: "Alegreya", Georgia, "Times New Roman", serif;
   font-size: 20px;
   background: var(--bg-body);
   color: var(--text);
